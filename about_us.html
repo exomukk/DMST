@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cactus Tours</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #ffffff;
+            --text-color: #000000;
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #4CAF50;
+            --secondary-color: #000000;
+            --text-color: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-buttons button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .header-buttons button:hover {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="https://images-platform.99static.com//roAZrzo707tPciczGBqOisl4glg=/0x699:701x1400/fit-in/500x500/99designs-contests-attachments/123/123472/attachment_123472267" alt="Cactus Logo">
+            <span style="margin-left: 10px; font-size: 18px; font-weight: bold;">Cacturié</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">About Us</a>
+            <a href="booking.html">Booking</a>
+        </nav>
+        <div class="header-buttons">
+            <button onclick="toggleTheme()">Switch Theme</button>
+            <button onclick="alert('Login feature coming soon!')">Login</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>About Us</h1>
+        <p>At Cactus Tours, we are dedicated to providing the best travel experiences with our highly skilled and friendly team. Learn more about the people who make your journey unforgettable.</p>
+
+        <div class="team">
+            <div class="team-member">
+                <img src="member1.jpg" alt="Team Member">
+                <h3>Nguyen Van A</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="member2.jpg" alt="Team Member">
+                <h3>Le Thi B</h3>
+                <p>Tour Manager</p>
+            </div>
+            <div class="team-member">
+                <img src="member3.jpg" alt="Team Member">
+                <h3>Tran Van C</h3>
+                <p>Customer Support</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact us: <a href="mailto:info@tourguide.com">info@tourguide.com</a> | Phone: +123456789</p>
+        <p>&copy; 2024 Cactus Tours. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+        }
+    </script>
+</body>
+</html>
